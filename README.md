@@ -20,6 +20,7 @@ An intelligent AI agent that answers questions about University of Engineering a
 - [🧪 Testing](#-testing)
 - [👥 Team Contributions](#-team-contributions)
 - [📹 Video Presentation](#-video-presentation)
+  https://drive.google.com/drive/folders/1sTIchrPbeDPqd6PSBhjqBKDYsYV5Va_e?usp=sharing
 - [📚 API Documentation](#-api-documentation)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
@@ -275,7 +276,7 @@ pie title Team Responsibilities
 "What's the weather today?"
 ```
 
-**Video Link**: [Add your video presentation link here]
+**Video Link**: [https://drive.google.com/drive/folders/1sTIchrPbeDPqd6PSBhjqBKDYsYV5Va_e?usp=sharing]
 
 ---
 
