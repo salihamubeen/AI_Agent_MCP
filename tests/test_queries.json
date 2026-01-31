@@ -1,0 +1,28 @@
+{
+  "department_related": [
+    "What departments are available at UET?",
+    "Tell me about Computer Science department",
+    "What are the admission requirements for Electrical Engineering?",
+    "What courses are offered in Mechanical Engineering?",
+    "What is the fee structure for Civil Engineering?",
+    "How many faculties does UET have?",
+    "What are the research facilities in Chemical Engineering department?",
+    "Which engineering programs are accredited?",
+    "What are the lab facilities in Computer Science?",
+    "How to apply for Architecture program?"
+  ],
+  "tricky_questions": [
+    "Are there any sports facilities at UET?",
+    "What is the location of UET?",
+    "Tell me about university hostels",
+    "Is there a medical facility on campus?",
+    "What are the library timings?"
+  ],
+  "out_of_scope": [
+    "What is the capital of Pakistan?",
+    "Tell me a joke",
+    "How to cook biryani?",
+    "What's the weather today?",
+    "Explain quantum physics"
+  ]
+}

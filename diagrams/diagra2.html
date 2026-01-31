@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UET AI Agent Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            padding: 40px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #60a5fa;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(96, 165, 250, 0.5);
+        }
+        .subtitle {
+            text-align: center;
+            color: #94a3b8;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .architecture-diagram {
+            background: rgba(30, 41, 59, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            border: 1px solid #334155;
+            margin-bottom: 30px;
+        }
+        .mermaid {
+            background: transparent !important;
+            text-align: center;
+        }
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(51, 65, 85, 0.7);
+            border-radius: 10px;
+            border-left: 4px solid;
+        }
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .tech-card {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #475569;
+        }
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        .tech-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .flow-animation {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: rgba(15, 23, 42, 0.7);
+            border-radius: 15px;
+            border: 1px solid #475569;
+        }
+        .flow-item {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 50px;
+            animation: flow 3s infinite;
+            position: relative;
+        }
+        @keyframes flow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .flow-arrow {
+            color: #60a5fa;
+            font-size: 1.5em;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 UET Department AI Agent Architecture</h1>
+        <div class="subtitle">Model Context Protocol (MCP) Based Intelligent System</div>
+        
+        <div class="architecture-diagram">
+            <div class="mermaid">
+flowchart TD
+    subgraph "🌐 Frontend Layer"
+        A[("👤 User<br/>Interaction")] --> B["<i class='fab fa-streamlit'></i><br/><b>Streamlit UI</b><br/>Chat Interface<br/>Port: 8501"]
+        B --> C["<i class='fas fa-comments'></i><br/><b>Real-time Chat</b><br/>Message History<br/>Source Display"]
+    end
+    
+    subgraph "⚡ API Gateway"
+        D["<i class='fas fa-server'></i><br/><b>FastAPI Server</b><br/>Port: 8000"]
+        D --> E["<i class='fas fa-route'></i><br/><b>Endpoints</b><br/>POST /chat<br/>GET /health<br/>GET /departments"]
+        D --> F["<i class='fas fa-shield-alt'></i><br/><b>CORS & Validation</b><br/>Request Handling<br/>Error Management"]
+    end
+    
+    subgraph "🤖 MCP Agent Core"
+        G["<i class='fas fa-brain'></i><br/><b>Agent Engine</b><br/>Query Processing"]
+        G --> H["<i class='fas fa-search'></i><br/><b>Department Detector</b><br/>CS/EE/ME/CE/ARCH"]
+        G --> I["<i class='fas fa-filter'></i><br/><b>Query Classifier</b><br/>Facilities/Admission/Courses"]
+        G --> J["<i class='fas fa-robot'></i><br/><b>Response Builder</b><br/>Formatted Output"]
+    end
+    
+    subgraph "📚 Knowledge Base"
+        K["<i class='fas fa-database'></i><br/><b>Department Database</b>"]
+        K --> L["<i class='fas fa-laptop-code'></i><br/>Computer Science<br/>6 Labs, 6 Courses"]
+        K --> M["<i class='fas fa-bolt'></i><br/>Electrical Eng.<br/>Power Systems, Electronics"]
+        K --> N["<i class='fas fa-cogs'></i><br/>Mechanical Eng.<br/>Manufacturing, CAD"]
+        K --> O["<i class='fas fa-building'></i><br/>Civil Engineering<br/>Structures, Concrete"]
+        K --> P["<i class='fas fa-drafting-compass'></i><br/>Architecture<br/>Design, Planning"]
+    end
+    
+    C -- HTTP Request --> D
+    F -- Process --> G
+    J -- Retrieve --> K
+    K -- Data --> J
+    J -- Response --> F
+    F -- HTTP Response --> B
+    
+    style A fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:white
+    style B fill:#10b981,stroke:#047857,stroke-width:2px,color:white
+    style D fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:white
+    style G fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:white
+    style K fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:white
+    style L fill:#6366f1,stroke:#4f46e5,stroke-width:1px,color:white
+    style M fill:#ec4899,stroke:#db2777,stroke-width:1px,color:white
+    style N fill:#14b8a6,stroke:#0d9488,stroke-width:1px,color:white
+    style O fill:#f97316,stroke:#ea580c,stroke-width:1px,color:white
+    style P fill:#84cc16,stroke:#65a30d,stroke-width:1px,color:white
+            </div>
+        </div>
+
+        <div class="flow-animation">
+            <div class="flow-item">👤 User Query</div>
+            <span class="flow-arrow">➡️</span>
+            <div class="flow-item">🌐 Streamlit UI</div>
+            <span class="flow-arrow">➡️</span>
+            <div class="flow-item">⚡ FastAPI</div>
+            <span class="flow-arrow">➡️</span>
+            <div class="flow-item">🤖 MCP Agent</div>
+            <span class="flow-arrow">➡️</span>
+            <div class="flow-item">📚 Knowledge Base</div>
+            <span class="flow-arrow">➡️</span>
+            <div class="flow-item">📨 Response</div>
+        </div>
+
+        <div class="tech-stack">
+            <div class="tech-card">
+                <div class="tech-icon">🐍</div>
+                <h3>Python 3.11</h3>
+                <p>Core Programming Language</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">⚡</div>
+                <h3>FastAPI</h3>
+                <p>High-performance Backend</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">🎨</div>
+                <h3>Streamlit</h3>
+                <p>Interactive Frontend</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">🔗</div>
+                <h3>MCP</h3>
+                <p>Model Context Protocol</p>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon">📄</div>
+                <h3>UET Prospectus</h3>
+                <p>Data Source</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            themeCSS: `
+                .node rect, .node circle, .node ellipse, .node polygon {
+                    stroke-width: 2px;
+                    rx: 10px;
+                    ry: 10px;
+                }
+                .edgePath .path {
+                    stroke: #60a5fa;
+                    stroke-width: 2px;
+                }
+                .cluster rect {
+                    fill: rgba(30, 41, 59, 0.3);
+                    stroke: #475569;
+                    stroke-width: 2px;
+                    rx: 15px;
+                }
+                .cluster-label {
+                    fill: #94a3b8;
+                    font-weight: bold;
+                }
+            `
+        });
+    </script>
+</body>
+</html>
