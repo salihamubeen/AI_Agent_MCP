@@ -235,10 +235,10 @@ curl -X POST http://localhost:8000/chat \
 
 | Team Member | Responsibilities |
 |-------------|------------------|
-| **Person 1** | PDF processing, data extraction, and chunking |
-| **Person 2** | MCP agent implementation, RAG logic, guardrail system |
-| **Person 3** | FastAPI backend development, API endpoints, error handling |
-| **Person 4** | Streamlit GUI, testing, video recording, documentation |
+| **Iqbal Gill (2025S-MSAI-06)** | PDF processing, data extraction, and chunking |
+| **Saliha Mubeen (2025-MSAI-107)** | MCP agent implementation, RAG logic, guardrail system |
+| **Ayesha Nusrat (2025-MSAI-121)** | FastAPI backend development, API endpoints, error handling |
+| **Faiza Saeed (2025-MSAI-115)** | Streamlit GUI, testing, video recording, documentation |
 
 ### **Task Division Details**
 
@@ -246,8 +246,8 @@ curl -X POST http://localhost:8000/chat \
 pie title Team Responsibilities
     "Iqbal Gill (2025S-MSAI-06) - Data Processing" : 25
     "Saliha Mubeen (2025-MSAI-107) - MCP Agent & RAG" : 25
-    "Faiza Saeed (2025-MSAI-115) - FastAPI Backend" : 25
-    "Ayesha Nusrat (2025-MSAI-121) - GUI & Testing" : 25
+    "Ayesha Nusrat (2025-MSAI-121) - FastAPI Backend" : 25
+    "Faiza Saeed (2025-MSAI-115) - GUI & Testing" : 25
 ```
 
 ---
