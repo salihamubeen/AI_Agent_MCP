@@ -20,7 +20,7 @@ An intelligent AI agent that answers questions about University of Engineering a
 - [🧪 Testing](#-testing)
 - [👥 Team Contributions](#-team-contributions)
 - [📹 Video Presentation](#-video-presentation)
-  https://drive.google.com/drive/folders/1sTIchrPbeDPqd6PSBhjqBKDYsYV5Va_e?usp=sharing
+  [https://drive.google.com/drive/folders/1sTIchrPbeDPqd6PSBhjqBKDYsYV5Va_e?usp=sharing]
 - [📚 API Documentation](#-api-documentation)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
